@@ -1,0 +1,10 @@
+Unity3D初学者经常把Awake和Start混淆。
+
+Awake在MonoBehavior创建后就立刻调用（也就是游戏开始时系统的调用，一般用来创建变量，分配内存等）
+
+Start将在MonoBehavior创建后在该帧Update之前，在该Monobehavior.enabled == true的情况下执行（常常被用来给变量赋值等操作）
+
+Start只在脚本实例被启用时调用（即对象被第一次enable后，Update前调用），而Awake只要在脚本被实例化的时候就会被调用，且脚本的生命周期中只会被调用1次
+
+Awake总是在Start之前执行。每个游戏物体上的Awke以随机的顺序被调用（但是如果你在A对象的脚本上找B，B对象的脚本上找A，这两个是能够被互相找到的）。因此，应该用Awake来设置脚本间的引用，并用Start来传递信息。
+
