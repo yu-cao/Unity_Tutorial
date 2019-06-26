@@ -5,6 +5,22 @@ using Conditional = System.Diagnostics.ConditionalAttribute;
 
 public class MyPipeline : RenderPipeline
 {
+    private DrawRendererFlags drawFlags;
+
+    public MyPipeline(bool dynamicBatching, bool instancing)
+    {
+        if (dynamicBatching)
+        {
+            drawFlags = DrawRendererFlags.EnableDynamicBatching;
+        }
+
+        if (instancing)
+        {
+            //注意这里使用的是OR操作符，flag只有一个，当两个都被打开时，unity更喜欢实现批处理
+            drawFlags |= DrawRendererFlags.EnableInstancing;
+        }
+    }
+        
     public override void Render(ScriptableRenderContext renderContext, Camera[] cameras)
     {
         base.Render(renderContext, cameras);
@@ -50,7 +66,9 @@ public class MyPipeline : RenderPipeline
         cameraBuffer.Clear();
         
         var drawSetting = new DrawRendererSettings(camera, new ShaderPassName("SRPDefaultUnlit"));
+        drawSetting.flags = drawFlags;
         drawSetting.sorting.flags = SortFlags.CommonOpaque;
+        
         var filterSettings = new FilterRenderersSettings(true)
         {
             renderQueueRange = RenderQueueRange.opaque
