@@ -70,8 +70,16 @@
     <Compile Include="Assets\SRP\CustomPipeline\InstancedColor.cs" />
     <Compile Include="Assets\SRP\CustomPipeline\My Pipeline\MyPipeline.cs" />
     <Compile Include="Assets\SRP\CustomPipeline\My Pipeline\MyPipelineAsset.cs" />
+    <None Include="Assets\SRP\CustomPipeline\CustomShader\Lit.shader" />
     <None Include="Assets\SRP\CustomPipeline\ShaderLibrary\Unlit.hlsl" />
     <None Include="Assets\SRP\CustomPipeline\CustomShader\Unlit.shader" />
+    <None Include="Assets\SRP\CustomPipeline\ShaderLibrary\Lit.hlsl" />
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -81,20 +89,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Editor">
-      <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.Runtime">
-      <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
-      <HintPath>/Users/caoyu/GitHub/Unity_Tutorial/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2018.4.2f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
